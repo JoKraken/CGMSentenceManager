@@ -6,17 +6,11 @@ import { Sentence } from '../list/sentence';
   templateUrl: './list-item.component.html',
   styleUrls: ['./list-item.component.css']
 })
-export class ListItemComponent implements OnInit {
+export class ListItemComponent {
   @Input()
   sentence!: Sentence;
-  
-  @Output()
-  touch = new EventEmitter<number>();
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   getTooltip(): string {
     var tooltip = '';
@@ -25,10 +19,6 @@ export class ListItemComponent implements OnInit {
     if(this.sentence.o) tooltip += 'O ';
 
     return tooltip;
-  }
-
-  itemIsClicked() {
-    this.touch.emit(this.sentence.n);
   }
 
 }

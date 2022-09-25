@@ -3,6 +3,12 @@
     display: block;
 }
 
+.navbar__headline {
+    color: white;
+    margin: 0;
+    
+}
+
 ul {
     padding: 25px;
     display: flex;

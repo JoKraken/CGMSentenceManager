@@ -6,7 +6,7 @@ import { Sentence } from './sentence';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent implements OnInit {
+export class ListComponent {
   @Input() 
   list: Sentence[] = [];
   
@@ -15,12 +15,8 @@ export class ListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-
-  }
-
-  itemIsClicked(event: any) {
-    this.touch.emit(event);
+  itemIsClicked(n: number) {
+    this.touch.emit(n);
   }
 
 }

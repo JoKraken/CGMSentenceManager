@@ -1,5 +1,5 @@
 <h1>The list of sentence</h1>
 
 <div class="list">
-    <list-item class="list__item" *ngFor="let item of list" [sentence] = "item"  (touch)="itemIsClicked($event)"></list-item>
+    <list-item class="list__item" *ngFor="let item of list" [sentence] = "item"  (click)="itemIsClicked(item.n)"></list-item>
 </div>
