@@ -1,0 +1,21 @@
+<div class="edit-alert">
+    <h1 class="edit-alert__headline">Edit</h1>
+
+    <div class="edit-alert__input-container">
+        <span>Subject: </span>
+        <input ng-if="sentence.s" [(ngModel)]="sentence.s" type="text">
+    </div>
+
+    <div class="edit-alert__input-container">
+        <span>Verb: </span>
+        <input ng-if="sentence.v" [(ngModel)]="sentence.v" type="text">
+    </div>
+
+    <div class="edit-alert__input-container">
+        <span>Object: </span>
+        <input ng-if="sentence.o" [(ngModel)]="sentence.o" type="text">
+    </div>
+
+    <button class="edit-alert__button" (click)="save()">save</button>
+
+</div>

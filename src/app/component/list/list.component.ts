@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Sentence } from './sentence';
 
 @Component({
@@ -9,11 +9,18 @@ import { Sentence } from './sentence';
 export class ListComponent implements OnInit {
   @Input() 
   list: Sentence[] = [];
+  
+  @Output()
+  touch = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit(): void {
 
+  }
+
+  itemIsClicked(event: any) {
+    this.touch.emit(event);
   }
 
 }

@@ -1,0 +1,29 @@
+.edit-alert {
+    margin: auto;
+    border: brown 1px solid;
+    background-color: white;
+    padding: 30px;
+    width: fit-content;
+}
+
+.edit-alert__headline {
+    margin-top: 0;
+}
+
+.edit-alert__input-container {
+    margin-bottom: 15px;
+    display: table-caption;
+}
+
+.edit-alert__input-container > input {
+    margin-top: 5px;
+    border: brown 1px solid;
+}
+
+.edit-alert__button {
+    border: brown 1px solid;
+    border-radius: 15px;
+    background-color: brown;
+    color: white;
+    padding: 5px;
+}

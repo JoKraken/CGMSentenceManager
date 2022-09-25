@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Sentence } from '../list/sentence';
 
 @Component({
@@ -9,6 +9,9 @@ import { Sentence } from '../list/sentence';
 export class ListItemComponent implements OnInit {
   @Input()
   sentence!: Sentence;
+  
+  @Output()
+  touch = new EventEmitter<number>();
 
   constructor() { }
 
@@ -22,6 +25,10 @@ export class ListItemComponent implements OnInit {
     if(this.sentence.o) tooltip += 'O ';
 
     return tooltip;
+  }
+
+  itemIsClicked() {
+    this.touch.emit(this.sentence.n);
   }
 
 }

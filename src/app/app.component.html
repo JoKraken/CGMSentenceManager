@@ -2,7 +2,9 @@
 
 <div class="content" role="main">
 
-  <list [list]="sentenceList"></list>
+  <list [list]="sentenceList" (touch)="editSentences($event)"></list>
+
+  <edit-alert #editAlert id="editAlert" class="content__edit-alert" [sentence]="sentenceToEdit" (edit)="saveSentences()"></edit-alert>
 
 </div>
 
