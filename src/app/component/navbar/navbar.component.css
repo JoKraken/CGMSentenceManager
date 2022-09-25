@@ -1,0 +1,20 @@
+.navbar {
+    background-color: brown;
+    display: block;
+}
+
+ul {
+    padding: 25px;
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+}
+
+li::marker {
+    content: '';
+}
+
+li > p {
+    color: white;
+    margin: 0;
+}
