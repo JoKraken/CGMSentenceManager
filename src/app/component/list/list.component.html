@@ -1,9 +1,5 @@
 <p>The list of sentence: </p>
 
-<div>
-    <div *ngFor="let item of list">
-        <span ng-if="item.s">{{item.s}} </span>
-        <span ng-if="item.v">{{item.v}} </span>
-        <span ng-if="item.o">{{item.o}}</span>
-    </div>
+<div class="list">
+    <list-item class="list__item" *ngFor="let item of list" [sentence] = "item"></list-item>
 </div>
