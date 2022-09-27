@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Sentence } from '../list/sentence';
 
 @Component({
@@ -8,14 +8,18 @@ import { Sentence } from '../list/sentence';
 })
 export class EditAlertComponent {
   @Input()
-  sentence!: Sentence;
-  
+  sentenceToEdit!: Sentence;
+
   @Output()
-  edit = new EventEmitter();
+  edit = new EventEmitter<Sentence>();
 
-  constructor() { }
+  constructor() {}
 
-  save(){
+  save(): void {
+    this.edit.emit(this.sentenceToEdit);
+  }
+
+  cancel(): void {
     this.edit.emit();
   }
 

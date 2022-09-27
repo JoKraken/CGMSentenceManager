@@ -3,19 +3,22 @@
 
     <div class="edit-alert__input-container">
         <span>Subject: </span>
-        <input ng-if="sentence.s" [(ngModel)]="sentence.s" type="text">
+        <input [(ngModel)]="sentenceToEdit.s" type="text">
     </div>
 
     <div class="edit-alert__input-container">
         <span>Verb: </span>
-        <input ng-if="sentence.v" [(ngModel)]="sentence.v" type="text">
+        <input [(ngModel)]="sentenceToEdit.v" type="text">
     </div>
 
     <div class="edit-alert__input-container">
         <span>Object: </span>
-        <input ng-if="sentence.o" [(ngModel)]="sentence.o" type="text">
+        <input [(ngModel)]="sentenceToEdit.o" type="text">
     </div>
 
-    <button class="edit-alert__button" (click)="save()">save</button>
+    <div class="edit-alert__button-container">
+        <button class="edit-alert__button edit-alert__button--cancel" (click)="cancel()">cancel</button>
+        <button class="edit-alert__button" (click)="save()">save</button>
+    </div>
 
 </div>

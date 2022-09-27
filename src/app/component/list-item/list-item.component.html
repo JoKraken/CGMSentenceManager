@@ -1,6 +1,6 @@
-<div class="list-item" ng-if="sentence">
-    <span ng-if="sentence.s">{{sentence.s}} </span>
-    <span ng-if="sentence.v">{{sentence.v}} </span>
-    <span ng-if="sentence.o">{{sentence.o}}</span> <br>
+<div class="list-item" *ngIf="sentence">
+    <span *ngIf="sentence.s">{{sentence.s}} </span>
+    <span *ngIf="sentence.v">{{sentence.v}} </span>
+    <span *ngIf="sentence.o">{{sentence.o}}</span> <br>
     <span class="list-item_tooltiptext">{{getTooltip()}}</span>
 </div>

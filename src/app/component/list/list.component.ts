@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Sentence } from './sentence';
 
 @Component({
@@ -7,9 +7,9 @@ import { Sentence } from './sentence';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent {
-  @Input() 
+  @Input()
   list: Sentence[] = [];
-  
+
   @Output()
   touch = new EventEmitter<number>();
 

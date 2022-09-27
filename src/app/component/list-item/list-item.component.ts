@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Sentence } from '../list/sentence';
 
 @Component({
@@ -14,9 +14,11 @@ export class ListItemComponent {
 
   getTooltip(): string {
     var tooltip = '';
-    if(this.sentence.s) tooltip += 'S ';
-    if(this.sentence.v) tooltip += 'V ';
-    if(this.sentence.o) tooltip += 'O ';
+    if(this.sentence) {
+      if(this.sentence.s) tooltip += 'S ';
+      if(this.sentence.v) tooltip += 'V ';
+      if(this.sentence.o) tooltip += 'O ';
+    }
 
     return tooltip;
   }

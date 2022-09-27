@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { Sentence } from './component/list/sentence';
 
 @Component({
@@ -9,11 +9,11 @@ import { Sentence } from './component/list/sentence';
 export class AppComponent {
   title = 'CGMSentenceManager';
 
-  sentenceToEdit: Sentence ={
-    n: 1,
-    s: 'Anna',
-    v: 'is eating',
-    o: 'a cookie'
+  sentenceToEdit: Sentence = {
+    n: 0,
+    s: '',
+    v: '',
+    o: ''
    };
 
   sentenceList = [{
@@ -44,19 +44,21 @@ export class AppComponent {
     o: 'a drama'
    } as Sentence];
 
-  constructor() { } 
+  constructor() { }
 
-  editSentences(event: number): void {
-    this.showEditAlert(event);
+  editSentences(index: number): void {
+    this.showEditAlert(index);
   }
 
   showEditAlert(index: number): void {
-    this.sentenceToEdit = this.sentenceList[index-1];
+    this.sentenceToEdit = new Sentence(this.sentenceList[index-1]);
     document.getElementById('editAlert')!.style.display = 'block';
   }
 
-  saveSentences(): void {
+  saveSentences(sentence: Sentence): void {
+    if(sentence != undefined)
+      this.sentenceList[sentence.n-1] = sentence;
     document.getElementById('editAlert')!.style.display = 'none';
   }
-   
+
 }

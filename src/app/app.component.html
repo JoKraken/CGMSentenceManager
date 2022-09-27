@@ -6,5 +6,4 @@
 
 </div>
 
-
-  <edit-alert #editAlert id="editAlert" class="content__edit-alert" [sentence]="sentenceToEdit" (edit)="saveSentences()"></edit-alert>
+<edit-alert #editAlert id="editAlert" class="content__edit-alert" [sentenceToEdit]="sentenceToEdit" (edit)="saveSentences($event)"></edit-alert>

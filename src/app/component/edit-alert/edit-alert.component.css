@@ -1,5 +1,5 @@
 .edit-alert {
-    margin: auto;
+    margin: 10% auto;
     border: brown 1px solid;
     background-color: white;
     padding: 30px;
@@ -20,10 +20,25 @@
     border: brown 1px solid;
 }
 
+.edit-alert__button-container {
+  text-align: right;
+  margin-top: 5px;
+}
+
 .edit-alert__button {
     border: brown 1px solid;
     border-radius: 15px;
     background-color: brown;
     color: white;
     padding: 5px 10px;
+    cursor: pointer;
+}
+
+.edit-alert__button:first-of-type {
+  margin-right: 5px;
+}
+
+.edit-alert__button--cancel {
+  background-color: rgb(169,169,169);
+  border-color: rgb(169,169,169);
 }
