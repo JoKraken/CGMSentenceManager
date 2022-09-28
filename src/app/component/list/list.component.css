@@ -1,6 +1,14 @@
 .list__item {
-    display: block;
-    border-bottom: brown solid 1px;
-    padding: 5px 0;
-    cursor: pointer;
+  display: block;
+  border-bottom: brown solid 1px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.list__item:last-of-type {
+  border: none;
+}
+
+.list__item:hover {
+  background-color: rgb(169,169,169, .2);
 }
