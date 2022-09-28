@@ -1,9 +1,20 @@
-<navbar class="navbar" [title]="title"></navbar>
 
-<div class="content" role="main">
+<div>
+  <navbar class="navbar" [title]="title"></navbar>
 
+<<<<<<< Updated upstream
   <list [list]="sentenceList" (touch)="editSentences($event)"></list>
+=======
+  <div class="content" role="main">
+>>>>>>> Stashed changes
 
-</div>
+    <list [list]="sentenceList" (touch)="editSentences($event)"></list>
 
+  </div>
+
+<<<<<<< Updated upstream
 <edit-alert #editAlert id="editAlert" class="content__edit-alert" [sentenceToEdit]="sentenceToEdit" (edit)="saveSentences($event)"></edit-alert>
+=======
+  <edit-alert #editAlert id="editAlert" class="content__edit-alert" [sentenceToEdit]="sentenceToEdit" (edit)="saveSentences($event)"></edit-alert>
+</div>
+>>>>>>> Stashed changes

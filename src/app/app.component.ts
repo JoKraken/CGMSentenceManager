@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { Sentence } from './component/list/sentence';
+import { Sentence } from './sentence/sentence';
+import {Store} from "@ngrx/store";
+import {AppState} from "./app.state";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -15,8 +18,12 @@ export class AppComponent {
     v: '',
     o: ''
    };
+<<<<<<< Updated upstream
+=======
+  sentenceList: Sentence[] = [];
+>>>>>>> Stashed changes
 
-  sentenceList = [{
+  sentenceListDefault = [{
     n: 1,
     s: 'Anna',
     v: 'is eating',
@@ -44,7 +51,15 @@ export class AppComponent {
     o: 'a drama'
    } as Sentence];
 
+<<<<<<< Updated upstream
   constructor() { }
+=======
+  constructor(private store: Store<AppState>) {
+    this.store.select('sentenceReducer').subscribe(value => {
+      this.sentenceList = value;
+    });
+  }
+>>>>>>> Stashed changes
 
   editSentences(index: number): void {
     this.showEditAlert(index);

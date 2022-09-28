@@ -1,5 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+<<<<<<< Updated upstream
 import { Sentence } from '../list/sentence';
+=======
+import { Sentence } from '../../sentence/sentence';
+>>>>>>> Stashed changes
 
 @Component({
   selector: 'edit-alert',
